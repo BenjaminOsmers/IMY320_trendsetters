@@ -1,7 +1,41 @@
 import React from "react";
+import { Container, Grid, Typography } from "@mui/material";
+import HomeFooter from "../components/HomeFooter";
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#010028",
+        background: `url(./images/home.png) no-repeat center center/cover`,
+      }}
+    >
+      <Container
+        sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }}
+      >
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography
+              variant="h1"
+              sx={{ textAlign: "center", fontWeight: "600", color: "#fff" }}
+            >
+              Hero Title
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{ textAlign: "center", color: "#fff" }}
+            >
+              Welcome to trendsetters
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+      <HomeFooter color="#fff" />
+    </div>
+  );
 };
 
 export default HomePage;
