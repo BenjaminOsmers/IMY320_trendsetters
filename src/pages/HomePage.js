@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import HomeFooter from "../components/HomeFooter";
+import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,10 @@ const HomePage = () => {
         background: `url(./images/home.png) no-repeat center center/cover`,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Welcome | Trendsetters</title>
+      </Helmet>
       <Container
         sx={{ minHeight: "100vh", display: "flex", alignItems: "center" }}
       >

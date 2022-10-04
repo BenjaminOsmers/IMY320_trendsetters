@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import HomeFooter from "../components/HomeFooter";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
+import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
   return (
@@ -21,6 +22,10 @@ const ContactPage = () => {
         margin: 0,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact | Trendsetters</title>
+      </Helmet>
       <Container
         sx={{
           minHeight: "100vh",

@@ -1,6 +1,7 @@
 import React from "react";
-import { Container, Typography, Grid, Box } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
+import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
   return (
@@ -14,6 +15,10 @@ const AboutPage = () => {
         pt: 20,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About | Trendsetters</title>
+      </Helmet>
       <Masonry columns={2} spacing={15}>
         <Box sx={{ height: 300 }}>
           <Typography variant="h1" sx={{ fontWeight: 600 }}>

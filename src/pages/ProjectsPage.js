@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Typography, Grid, Box, Paper } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ProjectsPage = () => {
   return (
@@ -14,6 +15,10 @@ const ProjectsPage = () => {
         pt: 20,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Work | Trendsetters</title>
+      </Helmet>
       <Grid container sx={{ display: "flex", alignItems: "center", mb: 10 }}>
         <Grid item xs={6}>
           <Typography

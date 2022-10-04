@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Typography, Grid, Box } from "@mui/material";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ProjectDetails = () => {
   return (
@@ -16,6 +17,10 @@ const ProjectDetails = () => {
         pt: 20,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Carpool | Trendsetters</title>
+      </Helmet>
       <Box position="fixed" top={100} left={50}>
         <Link to="/work" style={{ color: "#000" }}>
           <ArrowBackOutlinedIcon fontSize="large" />
