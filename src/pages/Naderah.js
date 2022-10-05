@@ -18,7 +18,7 @@ const Naderah = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Work | Trendsetters</title>
+        <title>3D Robot Design | Trendsetters</title>
       </Helmet>
       <Box position="fixed" top={100} left={50}>
         <Link to="/work" style={{ color: "#000" }}>

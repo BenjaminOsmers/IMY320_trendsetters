@@ -18,21 +18,25 @@ const Benjamin = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Work | Trendsetters</title>
+        <title>UI/UX Redesign | Trendsetters</title>
       </Helmet>
       <Box position="fixed" top={100} left={50}>
         <Link to="/work" style={{ color: "#000" }}>
           <ArrowBackOutlinedIcon fontSize="large" />
         </Link>
       </Box>
-      <Grid container sx={{ display: "flex", alignItems: "center", mb: 10 }}>
-        <Grid item xs={6} sx={{ pl: 20 }}>
+      <Grid
+        container
+        sx={{ display: "flex", alignItems: "center", mb: 10 }}
+        spacing={3}
+      >
+        <Grid item xs={12} md={6} sx={{ pl: 20 }}>
           <Typography variant="h1" sx={{ fontWeight: "600" }}>
             UI/UX Redesign
           </Typography>
           <Typography>by Benjamin Osmers</Typography>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Typography sx={{ textAlign: "center" }}>Projects</Typography>
         </Grid>
       </Grid>

@@ -19,8 +19,12 @@ const ProjectsPage = () => {
         <meta charSet="utf-8" />
         <title>Work | Trendsetters</title>
       </Helmet>
-      <Grid container sx={{ display: "flex", alignItems: "center", mb: 10 }}>
-        <Grid item xs={6}>
+      <Grid
+        container
+        sx={{ display: "flex", alignItems: "center", mb: 10 }}
+        spacing={5}
+      >
+        <Grid item xs={12} md={6}>
           <Typography
             variant="h1"
             sx={{ textAlign: "center", fontWeight: "600" }}
@@ -28,8 +32,13 @@ const ProjectsPage = () => {
             Projects
           </Typography>
         </Grid>
-        <Grid item xs={6}>
-          <Typography sx={{ textAlign: "center" }}>Projects</Typography>
+        <Grid item xs={12} md={6}>
+          <Typography sx={{ pr: 20 }}>
+            Below is a list of the projects we have done. Each type of service
+            we provide is showcased as well as which of our team members was
+            responsible for that project to gain a better understanding of our
+            expertise.
+          </Typography>
         </Grid>
       </Grid>
       <Grid container spacing={5} sx={{ px: 20, mb: 20 }}>

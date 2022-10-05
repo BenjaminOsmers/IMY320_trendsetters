@@ -39,7 +39,8 @@ const ContactPage = () => {
         <Grid container sx={{ p: 0, m: 0, minHeight: "100vh" }}>
           <Grid
             item
-            xs={5}
+            xs={12}
+            lg={5}
             style={{
               background: `url(./images/contact.gif) no-repeat center center/cover`,
               display: "flex",
@@ -58,7 +59,8 @@ const ContactPage = () => {
           </Grid>
           <Grid
             item
-            xs={7}
+            xs={12}
+            lg={7}
             sx={{
               display: "flex",
               flexDirection: "column",

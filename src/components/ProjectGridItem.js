@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProjectGridItem = ({ title, subtitle, image, link }) => {
   return (
-    <Grid item xs={6}>
+    <Grid item xs={12} sm={12} md={6}>
       <Link to={`/${link}`} style={{ textDecoration: "none" }}>
         <Paper
           elevation={5}

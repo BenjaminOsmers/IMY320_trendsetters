@@ -24,10 +24,20 @@ const AboutPage = () => {
       </Helmet>
       <Masonry columns={2} spacing={15}>
         <Box sx={{ height: 300 }}>
-          <Typography variant="h1" sx={{ fontWeight: 600 }}>
+          <Typography variant="h1" sx={{ fontWeight: 600, mb: 2 }}>
             About
           </Typography>
-          <Typography>About</Typography>
+          <Typography>
+            We are Trendsetters. We are a self-made content creation company
+            with creativity and hard work at our core. Our work is focused on
+            primarily on website development/design, 3D model designs, and UX/UI
+            services. <br />
+            <br /> We are a fairly new company in the industry but our work
+            speaks for itself, which can be found in our projects page. We are a
+            team of 5 with each of us having our own unique specialties, working
+            together to produce high value work to ensure our clients the best
+            quality work.
+          </Typography>
         </Box>
         <Box>
           <img src="./images/about.gif" alt="about" style={{ width: "100%" }} />
