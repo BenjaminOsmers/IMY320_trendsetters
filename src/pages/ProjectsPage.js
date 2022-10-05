@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Typography, Grid, Box, Paper } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Container, Typography, Grid } from "@mui/material";
 import { Helmet } from "react-helmet";
+import ProjectGridItem from "../components/ProjectGridItem";
 
 const ProjectsPage = () => {
   return (
@@ -32,7 +32,69 @@ const ProjectsPage = () => {
           <Typography sx={{ textAlign: "center" }}>Projects</Typography>
         </Grid>
       </Grid>
-      <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
+      <Grid container spacing={5} sx={{ px: 20, mb: 20 }}>
+        <ProjectGridItem
+          title="Carpool"
+          subtitle="mobile ridesharing app"
+          image="carpool_bg.png"
+          link="carpool"
+        />
+        <ProjectGridItem
+          title="UI/UX Redesign"
+          subtitle="by Benjamin Osmers"
+          image="ben_bg.png"
+          link="benjamin"
+        />
+        <ProjectGridItem
+          title="UI/UX Redesign"
+          subtitle="by Zivan Haripershad"
+          image="zivan_project.png"
+          link="zivan"
+        />
+        <ProjectGridItem
+          title="3D Robot Design"
+          subtitle="by Naderah Limbada"
+          image="naderah_bg.png"
+          link="naderah"
+        />
+        <ProjectGridItem
+          title="3D Robot Design"
+          subtitle="by Cameron Brammer"
+          image="cam_project.png"
+          link="cameron"
+        />
+        <ProjectGridItem
+          title="UI/UX Redesign"
+          subtitle="by Devank Harripersad"
+          image="devank_project.png"
+          link="devank"
+        />
+        <ProjectGridItem
+          title="emom"
+          subtitle="ecommerce store"
+          image="emom_bg.png"
+          link="emom"
+        />
+        <ProjectGridItem
+          title="Design Portfolio"
+          subtitle="3D design portfolio"
+          image="design_bg.png"
+          link="portfolio"
+        />
+        <ProjectGridItem
+          title="Gravelotte Eng"
+          subtitle="corporate website"
+          image="grav_bg.png"
+          link="grav"
+        />
+        <ProjectGridItem
+          title="Belle Ombre"
+          subtitle="corporate website"
+          image="belle_bg.png"
+          link="belle"
+        />
+      </Grid>
+      {/* <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <Link to="/carpool" style={{ textDecoration: "none" }}>
           <Paper sx={{ borderRadius: 0, zIndex: 10 }} elevation={5}>
             <Grid container sx={{ borderLeft: 4, borderColor: "#4703A6" }}>
@@ -58,30 +120,7 @@ const ProjectsPage = () => {
             </Grid>
           </Paper>
         </Link>
-        <Paper sx={{ borderRadius: 0, zIndex: 10 }} elevation={5}>
-          <Grid container sx={{ borderLeft: 4, borderColor: "#4703A6" }}>
-            <Grid item xs={6} sx={{ backgroundColor: "#EFEFEF", p: 5 }}>
-              <Typography variant="h4">Carpool</Typography>
-              <Typography>Mobile App Development</Typography>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <img
-                src="./images/carpool.png"
-                alt="carpool"
-                style={{ width: "40%" }}
-              />
-            </Grid>
-          </Grid>
-        </Paper>
-      </Box>
+      </Box> */}
     </Container>
   );
 };

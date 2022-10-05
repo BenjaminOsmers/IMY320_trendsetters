@@ -1,9 +1,12 @@
-import React from "react";
-import { Container, Typography, Box } from "@mui/material";
+import React, { useState } from "react";
+import { Container, Typography, Box, Grid, Divider } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
+  const [image, setImage] = useState("./images/ben.png");
+  const [member, setMember] = useState("ben");
+
   return (
     <Container
       sx={{
@@ -27,24 +30,143 @@ const AboutPage = () => {
           <Typography>About</Typography>
         </Box>
         <Box>
-          <img
-            src="./images/about1.png"
-            alt="about"
-            style={{ width: "100%" }}
-          />
+          <img src="./images/about.gif" alt="about" style={{ width: "100%" }} />
         </Box>
         <Box>
-          <img
-            src="./images/about2.png"
-            alt="about"
-            style={{ width: "100%" }}
-          />
+          <img src="./images/hand.gif" alt="about" style={{ width: "100%" }} />
         </Box>
       </Masonry>
       <Container>
-        <Typography variant="h1" sx={{ fontWeight: 600, textAlign: "center" }}>
+        <Typography
+          variant="h1"
+          sx={{ fontWeight: 600, textAlign: "center", mb: 5 }}
+        >
           Meet Our Crew
         </Typography>
+        <Grid container sx={{ mb: 20 }}>
+          <Grid
+            item
+            xs={6}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+          >
+            <Divider />
+            <Box
+              onClick={() => {
+                setImage("./images/ben.png");
+                setMember("ben");
+              }}
+              sx={{ py: 2 }}
+            >
+              <Typography
+                variant="h5"
+                color={member === "ben" ? "#000" : "#AAAAAA"}
+              >
+                Benjamin Osmers
+              </Typography>
+            </Box>
+            <Divider
+              sx={{
+                borderColor: member === "ben" && "#4703A6",
+                border: member === "ben" && 2,
+              }}
+            />
+            <Box
+              onClick={() => {
+                setImage("./images/cameron_profile.png");
+                setMember("cameron");
+              }}
+              sx={{ py: 2 }}
+            >
+              <Typography
+                color={member === "cameron" ? "#000" : "#AAAAAA"}
+                variant="h5"
+              >
+                Cameron Brammer
+              </Typography>
+            </Box>
+            <Divider
+              sx={{
+                borderColor: member === "cameron" && "#4703A6",
+                border: member === "cameron" && 2,
+              }}
+            />
+            <Box
+              onClick={() => {
+                setImage("./images/zivan_profile.png");
+                setMember("zivan");
+              }}
+              sx={{ py: 2 }}
+            >
+              <Typography
+                variant="h5"
+                color={member === "zivan" ? "#000" : "#AAAAAA"}
+              >
+                Zivan Haripershad
+              </Typography>
+            </Box>
+            <Divider
+              sx={{
+                borderColor: member === "zivan" && "#4703A6",
+                border: member === "zivan" && 2,
+              }}
+            />
+            <Box
+              onClick={() => {
+                setImage("./images/naderah_profile.png");
+                setMember("naderah");
+              }}
+              sx={{ py: 2 }}
+            >
+              <Typography
+                variant="h5"
+                color={member === "naderah" ? "#000" : "#AAAAAA"}
+              >
+                Naderah Limbada
+              </Typography>
+            </Box>
+            <Divider
+              sx={{
+                borderColor: member === "naderah" && "#4703A6",
+                border: member === "naderah" && 2,
+              }}
+            />
+            <Box
+              onClick={() => {
+                setImage("./images/devank_profile.png");
+                setMember("devank");
+              }}
+              sx={{ py: 2 }}
+            >
+              <Typography
+                variant="h5"
+                color={member === "devank" ? "#000" : "#AAAAAA"}
+              >
+                Devank Harripersad
+              </Typography>
+            </Box>
+            <Divider
+              sx={{
+                borderColor: member === "devank" && "#4703A6",
+                border: member === "devank" && 2,
+              }}
+            />
+          </Grid>
+          <Grid
+            item
+            xs={6}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img src={image} alt="ben" style={{ height: 400 }} />
+          </Grid>
+        </Grid>
       </Container>
     </Container>
   );

@@ -81,7 +81,7 @@ const Header = () => {
               <Grid container>
                 <Grid item xs={6} sx={{ pt: 5 }}>
                   <img
-                    src="./images/menu_image.png"
+                    src="./images/home.gif"
                     alt="Menu"
                     style={{ width: "80%" }}
                   />

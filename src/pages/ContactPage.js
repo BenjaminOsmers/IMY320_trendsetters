@@ -41,7 +41,7 @@ const ContactPage = () => {
             item
             xs={5}
             style={{
-              background: `url(./images/contact.png) no-repeat center center/cover`,
+              background: `url(./images/contact.gif) no-repeat center center/cover`,
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
