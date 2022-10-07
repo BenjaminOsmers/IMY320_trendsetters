@@ -147,6 +147,7 @@ There is a very basic timeline for this project, the project will run for 2 mont
 
 ## Design & Illustrations
 <img src="https://github.com/BenjaminOsmers/IMY320_trendsetters/blob/master/design_guide.png" width=400px>
+
 ### Colour Palette
 
 When designing our website our choice for our colour palette was inspired by colour theory, to create a harmonious colour combination, and colour psychology, to influence individuals feelings, emotions, and behaviours.  This led us to deciding on a colour palette that uses blues and purples, as these colours are associated with calm, trust, competence, loyalty and creativity. These are emotions that we want our potential clients to feel when visiting our website, to earn their trust and show that we are reliable. (Corrigan 2022)
