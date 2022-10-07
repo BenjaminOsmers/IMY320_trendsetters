@@ -3,6 +3,8 @@ import { Container, Typography, Grid, Box } from "@mui/material";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import CarpoolScreenshots from "../components/CarpoolScreenshots";
+import CarpoolFeatureList from "../components/CarpoolFeatureList";
 
 const ProjectDetails = () => {
   return (
@@ -66,18 +68,29 @@ const ProjectDetails = () => {
       </Grid>
       <Container sx={{ width: "35vw" }}>
         <Box>
-          <Typography variant="h4" sx={{ mb: 1 }}>
+          <Typography variant="h4" sx={{ mb: 2 }}>
             Carpool Ridesharing App
           </Typography>
-          <Typography sx={{ mb: 10 }}>Description</Typography>
+          <Typography sx={{ mb: 10 }}>
+            Carpool is a mobile application that helps students find affordable
+            transport to and from campus or longer trips such as returning home
+            for semester break. Carpool provides students with a central
+            location whereby they can post, find, and join safe car trips.
+            <br />
+            <br />
+            This application allows students with vehicles to save on petrol
+            costs as well as provide affordable transportation to students who
+            do not have vehicles. Students can travel to their desired location
+            whilst sharing the car and expenditures.
+          </Typography>
         </Box>
       </Container>
       <Container sx={{ width: "35vw" }}>
         <Box>
           <Typography variant="h4" sx={{ mb: 1 }}>
-            Features
+            Main Features
           </Typography>
-          <Typography sx={{ mb: 20 }}>Description</Typography>
+          <CarpoolFeatureList />
         </Box>
       </Container>
       <Grid
@@ -132,6 +145,7 @@ const ProjectDetails = () => {
           </Grid>
         </Grid>
       </Grid>
+      <CarpoolScreenshots />
     </Container>
   );
 };
