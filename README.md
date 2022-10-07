@@ -146,6 +146,7 @@ There is a very basic timeline for this project, the project will run for 2 mont
 - **28 October** - The final design of the website to be completed by this date. A usability test of the final website will also be included along with feedback and a conclusion based on the usability test.
 
 ## Design & Illustrations
+<img src="https://github.com/BenjaminOsmers/IMY320_trendsetters/blob/master/design_guide.png" width=400px>
 
 ### Colour Palette
 
