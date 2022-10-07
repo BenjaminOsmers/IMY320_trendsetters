@@ -2,9 +2,7 @@ import React from "react";
 import {
   List,
   ListItem,
-  ListItemAvatar,
   ListItemText,
-  Avatar,
   Divider,
   Grid,
   Typography,
