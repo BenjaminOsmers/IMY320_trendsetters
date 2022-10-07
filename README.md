@@ -8,6 +8,8 @@ Our company, ‘The Trendsetters’ is a self made content creation company. We 
 
 ### [Persona] Who are you designing for?
 
+<img src="https://github.com/BenjaminOsmers/IMY320_trendsetters/blob/master/design_guide.png" width=200px height=150px>
+
 Matthew
 _“It’s your work so show it off to the best of your ability”_
 
@@ -44,6 +46,8 @@ User tasks could include:
 - Learning about the company by looking at the about page before getting in contact with us.
 - Viewing our work by visiting a website our team has designed, by clicking the link on that specific projects page.
 - Playing a game our company has designed by downloading the game from the page dedicated to the designed game.
+
+<img src="https://github.com/BenjaminOsmers/IMY320_trendsetters/blob/master/design_guide.png" width=200px height=150px>
 
 ## Problem Statement
 
@@ -146,7 +150,8 @@ There is a very basic timeline for this project, the project will run for 2 mont
 - **28 October** - The final design of the website to be completed by this date. A usability test of the final website will also be included along with feedback and a conclusion based on the usability test.
 
 ## Design & Illustrations
-<img src="https://github.com/BenjaminOsmers/IMY320_trendsetters/blob/master/design_guide.png" width=400px>
+
+<img src="https://github.com/BenjaminOsmers/IMY320_trendsetters/blob/master/design_guide.png" width=200px height=150px>
 
 ### Colour Palette
 
