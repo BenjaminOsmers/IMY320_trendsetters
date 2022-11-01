@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography, Button } from "@mui/material";
 import HomeFooter from "../components/HomeFooter";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -39,7 +40,15 @@ const HomePage = () => {
         ]}
       >
         <Grid container sx={{ zIndex: 20 }}>
-          <Grid item xs={12}>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <Typography
               variant="h1"
               sx={{ textAlign: "center", fontWeight: "600", color: "#fff" }}
@@ -52,6 +61,25 @@ const HomePage = () => {
             >
               A Design &amp; Development Studio
             </Typography>
+            <Link to="/work" style={{ textDecoration: "none" }}>
+              <Button
+                sx={{
+                  backgroundColor: "#fff",
+                  width: "fit-content",
+                  my: 2,
+                  color: "#4703A6",
+                  px: 3,
+                  textDecoration: "none",
+                  py: 1,
+                  ":hover": {
+                    backgroundColor: "#4703a6",
+                    color: "#fff",
+                  },
+                }}
+              >
+                View Our Work
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Container>

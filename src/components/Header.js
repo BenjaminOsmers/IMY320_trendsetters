@@ -27,27 +27,135 @@ const Header = () => {
         elevation={0}
       >
         <Toolbar>
-          <Typography
-            variant="h3"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              fontWeight: "900",
-              pl: 3,
+          <Link
+            to="/"
+            style={{
+              flex: 2.5,
+              textDecoration: "none",
               color: show || location.pathname === "/" ? "#fff" : "#000",
+            }}
+          >
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                flex: 2.5,
+                fontWeight: "900",
+                pl: 5,
+                color: show || location.pathname === "/" ? "#fff" : "#000",
+                ":hover": {
+                  color: "#4703A6",
+                },
+              }}
+            >
+              trendsetters
+            </Typography>
+          </Link>
+          <Box
+            sx={{
+              flex: 1,
+              pr: 5,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
             }}
           >
             <Link
               to="/"
               style={{
                 textDecoration: "none",
-                color: show || location.pathname === "/" ? "#fff" : "#000",
+                color: location.pathname === "/" ? "#fff" : "#000",
+                fontWeight: "600",
               }}
             >
-              t
+              <Typography
+                sx={{
+                  borderBottom:
+                    location.pathname === "/" ? "3px solid #4703A6" : "none",
+                  ":hover": {
+                    borderBottom:
+                      location.pathname !== "/" && "3px solid #4703A6",
+                  },
+                  fontWeight: "500",
+                }}
+              >
+                Home
+              </Typography>
             </Link>
-          </Typography>
-          <IconButton
+            <Link
+              to="/work"
+              style={{
+                textDecoration: "none",
+                color: location.pathname === "/" ? "#fff" : "#000",
+                fontWeight: "600",
+              }}
+            >
+              <Typography
+                sx={{
+                  borderBottom:
+                    location.pathname === "/work"
+                      ? "3px solid #4703A6"
+                      : "none",
+                  ":hover": {
+                    borderBottom:
+                      location.pathname !== "/work" && "3px solid #4703A6",
+                  },
+                  fontWeight: "500",
+                }}
+              >
+                Work
+              </Typography>
+            </Link>
+            <Link
+              to="/about"
+              style={{
+                textDecoration: "none",
+                color: location.pathname === "/" ? "#fff" : "#000",
+                fontWeight: "600",
+              }}
+            >
+              <Typography
+                sx={{
+                  borderBottom:
+                    location.pathname === "/about"
+                      ? "3px solid #4703A6"
+                      : "none",
+                  ":hover": {
+                    borderBottom:
+                      location.pathname !== "/about" && "3px solid #4703A6",
+                  },
+                  fontWeight: "500",
+                }}
+              >
+                About
+              </Typography>
+            </Link>
+            <Link
+              to="/contact"
+              style={{
+                textDecoration: "none",
+                color: location.pathname === "/" ? "#fff" : "#000",
+                fontWeight: "600",
+              }}
+            >
+              <Typography
+                sx={{
+                  borderBottom:
+                    location.pathname === "/contact"
+                      ? "3px solid #4703A6"
+                      : "none",
+                  ":hover": {
+                    borderBottom:
+                      location.pathname !== "/contact" && "3px solid #4703A6",
+                  },
+                  fontWeight: "500",
+                }}
+              >
+                Contact
+              </Typography>
+            </Link>
+          </Box>
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -68,7 +176,7 @@ const Header = () => {
                 }}
               />
             )}
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
         {show && (
           <Slide direction="down" in={show} mountOnEnter unmountOnExit>

@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Typography, Grid } from "@mui/material";
 import { Helmet } from "react-helmet";
 import ProjectGridItem from "../components/ProjectGridItem";
+import LargeProjectGridItem from "../components/LargeProjectGridItem";
 
 const ProjectsPage = () => {
   return (
@@ -41,8 +42,8 @@ const ProjectsPage = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={5} sx={{ px: 20, mb: 20 }}>
-        <ProjectGridItem
+      <Grid container spacing={5} sx={{ mb: 20 }}>
+        <LargeProjectGridItem
           title="Carpool"
           subtitle="mobile ridesharing app"
           image="carpool_bg.png"
@@ -78,7 +79,7 @@ const ProjectsPage = () => {
           image="devank_project.png"
           link="devank"
         />
-        <ProjectGridItem
+        <LargeProjectGridItem
           title="emom"
           subtitle="ecommerce store"
           image="emom_bg.png"

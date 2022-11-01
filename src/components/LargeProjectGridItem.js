@@ -2,9 +2,9 @@ import React from "react";
 import { Grid, Paper, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const ProjectGridItem = ({ title, subtitle, image, link }) => {
+const LargeProjectGridItem = ({ title, subtitle, image, link }) => {
   return (
-    <Grid item xs={12} sm={12} md={4}>
+    <Grid item xs={12} sm={12} md={8}>
       <Link to={`/${link}`} style={{ textDecoration: "none" }}>
         <Paper
           elevation={5}
@@ -27,4 +27,4 @@ const ProjectGridItem = ({ title, subtitle, image, link }) => {
   );
 };
 
-export default ProjectGridItem;
+export default LargeProjectGridItem;

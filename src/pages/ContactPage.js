@@ -7,7 +7,7 @@ import {
   Divider,
   Box,
 } from "@mui/material";
-import HomeFooter from "../components/HomeFooter";
+// import HomeFooter from "../components/HomeFooter";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { Helmet } from "react-helmet";
 
@@ -71,7 +71,7 @@ const ContactPage = () => {
           >
             <Divider />
             <Box sx={{ display: "flex", py: 3 }}>
-              <Typography variant="h6" sx={{ pr: 3, color: "#606060" }}>
+              <Typography variant="h5" sx={{ pr: 3, color: "#606060" }}>
                 01
               </Typography>
               <Box sx={{ flexGrow: 1 }}>
@@ -136,7 +136,7 @@ const ContactPage = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "flex-end",
                 mt: 5,
               }}
             >
@@ -153,7 +153,7 @@ const ContactPage = () => {
           </Grid>
         </Grid>
       </Container>
-      <HomeFooter color="#000" />
+      {/* <HomeFooter color="#000" /> */}
     </div>
   );
 };
