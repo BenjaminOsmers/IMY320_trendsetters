@@ -66,18 +66,20 @@ const HomePage = () => {
                 sx={{
                   backgroundColor: "#fff",
                   width: "fit-content",
-                  my: 2,
+                  my: 3,
                   color: "#4703A6",
                   px: 3,
                   textDecoration: "none",
-                  py: 1,
+                  py: 2,
                   ":hover": {
                     backgroundColor: "#4703a6",
                     color: "#fff",
                   },
                 }}
               >
-                View Our Work
+                <Typography sx={{ fontWeight: "600" }}>
+                  View Our Work
+                </Typography>
               </Button>
             </Link>
           </Grid>

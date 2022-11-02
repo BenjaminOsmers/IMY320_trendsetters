@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Box,
@@ -19,11 +19,25 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const location = useLocation();
 
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="fixed"
-        sx={{ backgroundColor: show ? "#010028" : "transparent" }}
+        sx={{
+          backgroundColor: offset !== 0 ? "rgba(0, 0, 0, 0.7)" : "transparent",
+          pt: 2,
+          pb: 2,
+        }}
         elevation={0}
       >
         <Toolbar>
@@ -32,7 +46,8 @@ const Header = () => {
             style={{
               flex: 2.5,
               textDecoration: "none",
-              color: show || location.pathname === "/" ? "#fff" : "#000",
+              color:
+                offset !== 0 || location.pathname === "/" ? "#fff" : "#000",
             }}
           >
             <Typography
@@ -42,7 +57,12 @@ const Header = () => {
                 flex: 2.5,
                 fontWeight: "900",
                 pl: 5,
-                color: show || location.pathname === "/" ? "#fff" : "#000",
+                color:
+                  offset !== 0 ||
+                  location.pathname === "/" ||
+                  location.pathname === "/contact"
+                    ? "#fff"
+                    : "#000",
                 ":hover": {
                   color: "#4703A6",
                 },
@@ -64,7 +84,8 @@ const Header = () => {
               to="/"
               style={{
                 textDecoration: "none",
-                color: location.pathname === "/" ? "#fff" : "#000",
+                color:
+                  location.pathname === "/" || offset !== 0 ? "#fff" : "#000",
                 fontWeight: "600",
               }}
             >
@@ -86,7 +107,8 @@ const Header = () => {
               to="/work"
               style={{
                 textDecoration: "none",
-                color: location.pathname === "/" ? "#fff" : "#000",
+                color:
+                  location.pathname === "/" || offset !== 0 ? "#fff" : "#000",
                 fontWeight: "600",
               }}
             >
@@ -110,7 +132,8 @@ const Header = () => {
               to="/about"
               style={{
                 textDecoration: "none",
-                color: location.pathname === "/" ? "#fff" : "#000",
+                color:
+                  location.pathname === "/" || offset !== 0 ? "#fff" : "#000",
                 fontWeight: "600",
               }}
             >
@@ -134,7 +157,8 @@ const Header = () => {
               to="/contact"
               style={{
                 textDecoration: "none",
-                color: location.pathname === "/" ? "#fff" : "#000",
+                color:
+                  location.pathname === "/" || offset !== 0 ? "#fff" : "#000",
                 fontWeight: "600",
               }}
             >

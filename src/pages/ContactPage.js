@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Grid,
@@ -7,11 +7,33 @@ import {
   Divider,
   Box,
 } from "@mui/material";
-// import HomeFooter from "../components/HomeFooter";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { Helmet } from "react-helmet";
+import styled from "styled-components";
+
+const GridBg = styled(Grid)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/contact.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(70%);
+  }
+`;
 
 const ContactPage = () => {
+  const [hover, setHover] = useState(false);
+
   return (
     <div
       style={{
@@ -32,31 +54,27 @@ const ContactPage = () => {
           display: "flex",
           alignItems: "center",
           minWidth: "100vw",
+          overflow: "hidden",
           p: 0,
           m: 0,
         }}
       >
         <Grid container sx={{ p: 0, m: 0, minHeight: "100vh" }}>
-          <Grid
-            item
-            xs={12}
-            lg={5}
-            style={{
-              background: `url(./images/contact.gif) no-repeat center center/cover`,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-              justifyContent: "center",
-            }}
-          >
+          <GridBg item xs={12} lg={5}>
             <Typography
               variant="h1"
-              sx={{ fontWeight: "900", fontSize: 200, color: "#fff", mr: -15 }}
+              sx={{
+                fontWeight: "900",
+                fontSize: 200,
+                color: "#fff",
+                mr: -15,
+                zIndex: 20,
+              }}
             >
               Get In <br />{" "}
               <span style={{ color: "#4703A6", paddingLeft: 200 }}>Touch</span>
             </Typography>
-          </Grid>
+          </GridBg>
           <Grid
             item
             xs={12}
@@ -67,6 +85,7 @@ const ContactPage = () => {
               justifyContent: "center",
               px: 15,
               pl: 30,
+              pt: 10,
             }}
           >
             <Divider />
@@ -143,11 +162,17 @@ const ContactPage = () => {
               <Box
                 sx={{
                   borderRadius: 100,
-                  backgroundColor: "#4703A6",
+                  backgroundColor: hover ? "#fff" : "#4703A6",
+                  borderWidth: 3,
+                  borderColor: hover ? "#4703A6" : "#fff",
+                  borderStyle: "solid",
                   p: 3,
+                  cursor: "pointer",
                 }}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
               >
-                <SendOutlinedIcon sx={{ color: "#fff" }} />
+                <SendOutlinedIcon sx={{ color: hover ? "#4703a6" : "#fff" }} />
               </Box>
             </Box>
           </Grid>
